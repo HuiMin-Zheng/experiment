@@ -1,6 +1,26 @@
 # experiment
 R scripts for dealing with experiment data (e.g. randomization for animal study, calculate fold of changes for PCR results)
 
+## check and install all required R packages
+```
+# Install required packages if they were not installed
+## install packages from CRAN
+pkgs <- c("rcompanion","dunn.test","reshape2","pROC","ggplot2","optparse","vegan","doBy","psych","FSA","pheatmap")
+
+for (pkg in pkgs){
+  ## try install form CRAN
+  if(!require(pkg, character.only = TRUE)) install.packages(pkg,dependencies = T)
+  ## try install from Bioconductor
+  if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  if(!require(pkg, character.only = TRUE)) BiocManager::install(pkgs)
+}
+
+## install packages (or the development versions) from github or other sources
+#if (!requireNamespace("devtools")) install.packages("devtools")
+#devtools::install_github("xrobin/pROC") # install from github
+#install.packages("path/to/pkg/package_name.tar.gz", repos = NULL, type = "source") #install from source
+
+```
 
 ## randomization
 ```
