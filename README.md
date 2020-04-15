@@ -5,7 +5,7 @@ R scripts for dealing with experiment data (e.g. randomization for animal study,
 ```
 # Install required packages if they were not installed
 ## install packages from CRAN
-pkgs <- c("rcompanion","dunn.test","reshape2","pROC","ggplot2","optparse","vegan","doBy","psych","FSA","pheatmap")
+pkgs <- c("rcompanion","dunn.test","reshape2","pROC","ggplot2","optparse","vegan","doBy","psych","FSA","pheatmap","ade4")
 
 for (pkg in pkgs){
   ## try install form CRAN
